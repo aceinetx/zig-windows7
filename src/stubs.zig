@@ -37,3 +37,10 @@ pub export fn RtlGetSystemTimePrecise() windows.LONGLONG {
     _ = MessageBoxA(null, "RtlGetSystemTimePrecise not implemented", "zig windows7", 0);
     @panic("RtlGetSystemTimePrecise not implemented");
 }
+
+comptime {
+    _ = NtAlertThreadByThreadId;
+    _ = NtSetInformationVirtualMemory;
+    _ = NtWaitForAlertByThreadId;
+    _ = RtlGetSystemTimePrecise;
+}
